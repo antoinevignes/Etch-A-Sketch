@@ -5,7 +5,7 @@ const container = document.querySelector(".container");
 const reset = document.querySelector(".reset");
 
 reset.addEventListener("click", () => {
-  //   container.innerHTML = "";
+  container.innerHTML = "";
   createGrid();
 });
 
@@ -16,7 +16,7 @@ const createGrid = () => {
   let side = prompt("Number of squares per side (max 100)");
 
   //Check that side size is under 100
-  if (side > 100 || side !== "number" || side === 0) {
+  if (side > 100 || side < 1) {
     alert("Size must be a number under 100 and over 0!");
   } else {
     console.log(side);
