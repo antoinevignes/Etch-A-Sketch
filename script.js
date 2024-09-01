@@ -17,7 +17,7 @@ const createGrid = () => {
 
   //Check that side size is under 100
   if (side > 100 || side !== "number" || side === 0) {
-    alert("Size must be under 100 and over 0!");
+    alert("Size must be a number under 100 and over 0!");
   } else {
     console.log(side);
     // Calculate grid size
