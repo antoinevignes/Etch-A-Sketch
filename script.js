@@ -5,7 +5,7 @@ const container = document.querySelector(".container");
 const reset = document.querySelector(".reset");
 
 reset.addEventListener("click", () => {
-  container.innerHTML = "";
+  //   container.innerHTML = "";
   createGrid();
 });
 
@@ -13,18 +13,18 @@ reset.addEventListener("click", () => {
 
 const createGrid = () => {
   //Size prompt
-  let size = prompt("Number of squares per side (max 100)");
+  let side = prompt("Number of squares per side (max 100)");
 
-  //Check that size is under 100
-  if (size > 100 || size === 0 || size === "") {
+  //Check that side size is under 100
+  if (side > 100 || side !== "number" || side === 0) {
     alert("Size must be under 100 and over 0!");
   } else {
-    console.log(size);
+    console.log(side);
     // Calculate grid size
-    const gridSize = size * size;
+    const gridSize = side * side;
 
     //Calculate pixel size
-    const pixelSize = 400 / size;
+    const pixelSize = 400 / side;
 
     // Loop over to create divs
     for (let i = 0; i < gridSize; i++) {
